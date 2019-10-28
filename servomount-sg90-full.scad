@@ -21,7 +21,7 @@ module sg90mount()
     hw=2.6;   //Stärke des Servohalters
 
     wall=2.2; //Sockelstärke
-    nose=1;   //Stärke der Haltenase
+    nose=0.6; //Stärke der Haltenase
 
     
     difference()
@@ -45,7 +45,8 @@ module sg90mount()
             
             //unterer Klotz
             translate([tcx,-wall,0]) cube([sl,wall,sb+wall]);
-            translate([tcx,-wall,sb+wall]) cube([sl,wall+nose,nose]);
+            //Nase für unteren Klotz
+            //translate([tcx,-wall,sb+wall]) cube([sl,wall+nose,nose]);
             
             //Stützen für unteren Klotz
             hull()
